@@ -1,0 +1,17 @@
+﻿<center>
+<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if books %}
+    <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+<ul>
+        {% for book in books %}
+        <li><a href="/information/?id={{book.title}}"  title={{ book.title }}>{{ book.title }}</li>
+	<a href="/delete/?id={{book.title}}"  title=删除>删除
+	<a href="/renew/?id={{book.title}}"  title=更新>更新
+        {% endfor %}
+</ul>
+
+{% else %}
+    <p>No books matched your search criteria.</p>
+{% endif %}
+</center>

@@ -1,0 +1,21 @@
+﻿<html>
+<head>
+    <title>renew</title>
+</head>
+<body>
+{% if book %}
+    <form action="/renew/"  method="get">
+        
+	<p>书名<input type="text" name="bn" value={{book.title}}></p>
+	<p>ISBN<input type="text" name="ib" value={{book.isbn}}></p>
+	<p>更新作者<input type="text" name="na"></p>
+	<p>更新出版社<input type="text" name="pu"></p>
+	<p>更新出版日期<input type="text" name="pud"></p>
+	<p>更新价格<input type="text" name="pr"></p>
+        <input type="submit" value="renew">
+    </form>
+{% else %}
+    <p>No books matched your search criteria.</p>
+{% endif %}
+</body>
+</html>
