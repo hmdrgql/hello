@@ -21,7 +21,7 @@ def search_results(request):
 
 def information(request):
         t = request.GET['id']
-        book=Book.objects.get(title=t)
+        book=Book.objects.get(titl=t)
         a=Author.objects.get(authorid= book.authorid)
         return render_to_response('information.html',{'book':book,'author':a})
 
