@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+<center>
+    <form action="/search_results/" method="get">
+        查询作者<input type="text" name="q">
+        <input type="submit" value="Search">（例如：六道）
+	<p><a href="/new/"  title=新建>新建</p>
+    </form>
+</center>
+</body>
+</html>
